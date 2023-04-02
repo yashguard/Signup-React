@@ -6,8 +6,8 @@ function App() {
   const [show, setShow] = React.useState(false)
   const handleClick = () => setShow(!show)
   return (
-    <>
-      <Box bgGradient='linear(to-l, #7928CA, #FF0080)' w='100%' color='white'>
+    <Box bgGradient='linear(to-l, #7928CA, #FF0080)' w='100%' h='100vh' color='white'>
+      <Box>
         <Flex>
           <Center>
             <Image src='https://vspot.s3.amazonaws.com/sign-up/Logos/SignUp-Logo-Transparent.png' w='120px' ml='50px' /></Center>
@@ -31,25 +31,26 @@ function App() {
           </Center>
         </Flex>
       </Box>
-      <Box w='100%' h='100vh' bgGradient='linear(to-l, #7928CA, #FF0080)'>
-        <Container color='white' border='1px solid white' p='20px'>
+      <Box>
+        <Container color='white' border='1px solid white' p='50px 20px' mt='50px'>
           <Center>
             <Heading>CREATE ACCOUNT</Heading>
           </Center>
           <Flex>
-            <Input display='inline-block' mt='40px' w='45%' placeholder='First Name' />
+            <Input display='inline-block' mt='40px' w='45%' _placeholder={{ color: 'white' }} placeholder='First Name' />
             <Spacer />
-            <Input display='inline-block' mt='40px' w='45%' placeholder='Last Name' />
+            <Input display='inline-block' mt='40px' w='45%' _placeholder={{ color: 'white' }} placeholder='Last Name' />
           </Flex>
-          <Input display='inline-block' mt='20px' w='100%' placeholder='Email' />
+          <Input display='inline-block' mt='20px' w='100%' _placeholder={{ color: 'white' }} placeholder='Email' />
           <InputGroup mt='20px' size='md'>
             <Input
               pr='4.5rem'
               type={show ? 'text' : 'password'}
               placeholder='Enter password'
+              _placeholder={{ color: 'white' }}
             />
             <InputRightElement width='4.5rem'>
-              <Button h='1.75rem' size='sm' onClick={handleClick}>
+              <Button h='1.75rem' color='white' bg='transparent' size='sm' onClick={handleClick}>
                 {show ? 'Hide' : 'Show'}
               </Button>
             </InputRightElement>
@@ -59,9 +60,10 @@ function App() {
               pr='4.5rem'
               type={show ? 'text' : 'password'}
               placeholder='Re-type password'
+              _placeholder={{ color: 'white' }}
             />
             <InputRightElement width='4.5rem'>
-              <Button h='1.75rem' size='sm' onClick={handleClick}>
+              <Button h='1.75rem' color='white' bg='transparent' size='sm' onClick={handleClick}>
                 {show ? 'Hide' : 'Show'}
               </Button>
             </InputRightElement>
@@ -73,7 +75,7 @@ function App() {
           </Center>
         </Container>
       </Box>
-    </>
+    </Box>
   );
 }
 

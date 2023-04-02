@@ -12,3 +12,8 @@
     border: 1px solid #319795;
     background-color: #319795;
 }
+
+.css-1218ajc:hover {
+    background-color: transparent !important;
+    color: #319795;
+}
