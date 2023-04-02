@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.css-2ajxsz:hover {
+    color: #319795;
+}
+
+.css-kbrc6a:hover {
+    border: 1px solid #319795;
+    background-color: #319795;
+}
